@@ -31,7 +31,7 @@ impl From<u8> for TransmitMode {
     }
 }
 
-#[derive(Debug, PartialEq, Copy, Clone)]
+#[derive(Clone, Debug, PartialEq, Copy, Clone)]
 pub enum StationType {
     AllMobiles,
     Reserved,
@@ -58,7 +58,7 @@ impl From<u8> for StationType {
     }
 }
 
-#[derive(Debug, PartialEq, Copy, Clone)]
+#[derive(Clone, Debug, PartialEq, Copy, Clone)]
 pub enum StationInterval {
     AsAutonomousMode,
     Span(Duration),
@@ -87,7 +87,7 @@ impl From<u8> for StationInterval {
     }
 }
 
-#[derive(Debug, PartialEq)]
+#[derive(Clone, Debug, PartialEq)]
 pub struct GroupAssignmentCommand {
     pub message_type: u8,
     pub repeat_indicator: u8,

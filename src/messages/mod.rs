@@ -28,7 +28,7 @@ pub use parsers::message_type;
 use crate::lib::std::{format, vec, vec::Vec};
 
 /// Contains all structured messages recognized by this crate
-#[derive(Debug, PartialEq)]
+#[derive(Clone, Debug, PartialEq)]
 pub enum AisMessage {
     PositionReport(position_report::PositionReport),
     BaseStationReport(base_station_report::BaseStationReport),

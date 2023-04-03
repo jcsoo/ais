@@ -241,7 +241,7 @@ impl From<ShipType> for u8 {
     }
 }
 
-#[derive(Debug, PartialEq, Eq)]
+#[derive(Clone, Debug, PartialEq, Eq)]
 pub enum Dte {
     Ready,
     NotReady,
@@ -263,7 +263,7 @@ impl From<u8> for Dte {
     }
 }
 
-#[derive(Debug, PartialEq, Eq)]
+#[derive(Clone, Debug, PartialEq, Eq)]
 pub enum AssignedMode {
     Autonomous,
     Assigned,

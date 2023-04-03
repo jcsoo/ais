@@ -9,7 +9,7 @@ use nom::bits::{bits, complete::take as take_bits};
 use nom::combinator::map;
 use nom::IResult;
 
-#[derive(Debug, PartialEq)]
+#[derive(Clone, Debug, PartialEq)]
 pub struct BaseStationReport {
     pub message_type: u8,
     pub repeat_indicator: u8,

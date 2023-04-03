@@ -13,7 +13,7 @@ pub type MessageData = lib::std::vec::Vec<u8>;
 #[cfg(all(not(feature = "std"), not(feature = "alloc")))]
 pub type MessageData = lib::std::vec::Vec<u8, MAX_DATA_SIZE_BYTES>;
 
-#[derive(Debug, PartialEq, Eq)]
+#[derive(Clone, Debug, PartialEq, Eq)]
 pub struct BinaryBroadcastMessage {
     pub message_type: u8,
     pub repeat_indicator: u8,

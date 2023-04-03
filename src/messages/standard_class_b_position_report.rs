@@ -9,7 +9,7 @@ use nom::bits::{bits, complete::take as take_bits};
 use nom::combinator::map;
 use nom::IResult;
 
-#[derive(Debug, PartialEq)]
+#[derive(Clone, Debug, PartialEq)]
 pub struct StandardClassBPositionReport {
     pub message_type: u8,
     pub repeat_indicator: u8,
@@ -42,7 +42,7 @@ impl<'a> AisMessageType<'a> for StandardClassBPositionReport {
     }
 }
 
-#[derive(Debug, PartialEq, Eq)]
+#[derive(Clone, Debug, PartialEq, Eq)]
 pub enum CarrierSense {
     /// Class B SOTDMA unit
     Sotdma,
